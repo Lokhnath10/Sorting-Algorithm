@@ -20,7 +20,23 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
+''' 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: Lokhnath.J
+RegisterNumber: 23004865
+'''
+def selection_sort(array,size):
+    for ind in range(size):
+        min_index= ind
+        for j in range(ind+1,size):
+            if array[j] < array[min_index]:
+                min_index=j
+        (array[ind],array[min_index]) = (array[min_index],array[ind])
+   
+arr = eval(input())
+size=len(arr)
+selection_sort(arr,size)
+print(arr)
 
 
 
@@ -28,7 +44,28 @@ i)	#Selection Sort
 ```
 ii)	#Insertion Sort
 ```
-
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: LOkhnath.J
+RegisterNumber: 23004865
+'''
+def insertion_sort(arr):
+    n=len(arr)
+    if n<=1:
+        return
+    for i in range(1,n):
+        key=arr[i]
+        j=i-1
+        while j>=0 and key<arr[j]:
+            arr[j+1]=arr[j]
+            j -=1
+        arr[j+1] = key
+    
+    
+    
+arr = eval(input())
+insertion_sort(arr)
+print(arr)
 
 
 
@@ -37,6 +74,8 @@ ii)	#Insertion Sort
 ```
 
 ## Output:
+![Screenshot 2023-11-20 024314](https://github.com/Lokhnath10/Sorting-Algorithm/assets/138969918/4fa9883e-86ef-4a73-8f62-7c1b5a2c1130)
+![Screenshot 2023-11-20 024328](https://github.com/Lokhnath10/Sorting-Algorithm/assets/138969918/982b18ec-22f9-4ad7-adc7-784617296946)
 
 
 ## Result:
